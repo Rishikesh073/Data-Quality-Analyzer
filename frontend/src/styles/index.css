@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-[#e2e8f0] bg-[#0a0a0a];
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Global Dark/Japanese Theme Overrides */
+html, body {
+  background-color: #050505 !important;
+  color: #ffebef !important;
+}
+
+/* Override light theme Tailwind classes gracefully */
+.bg-white { background-color: #0f0f12 !important; border-color: #262030 !important; }
+.bg-slate-50 { background-color: #050505 !important; }
+.bg-indigo-50 { background-color: #1a0b14 !important; border-color: #4a1525 !important;}
+.bg-indigo-600 { background-color: #ff2a5f !important; }
+.text-indigo-600 { color: #ff2a5f !important; }
+.text-gray-900 { color: #ffffff !important; }
+.text-gray-800 { color: #f1f5f9 !important; }
+.text-gray-600 { color: #cbd5e1 !important; }
+.text-gray-500 { color: #94a3b8 !important; }
+.border-gray-100 { border-color: #1e1e24 !important; }
+.border-gray-200 { border-color: #27272a !important; }
+
+/* Custom Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.feature-slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.feature-slider-track {
+  display: flex;
+  width: 400%; /* 4 slides */
+  animation: slide 20s infinite cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.feature-slider-track:hover {
+  animation-play-state: paused;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #ff2a5f;
+  border-radius: 20px;
+}
