@@ -26,27 +26,27 @@ export default function Landing() {
 
       {/* Hero Section */}
       <main className="flex-grow flex flex-col items-center justify-center pt-24 pb-20 px-4 relative z-10 text-center container mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ff2a5f]/10 border border-[#ff2a5f]/30 text-[#ffb7c5] text-xs font-semibold mb-8 uppercase tracking-widest">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-semibold mb-8 uppercase tracking-widest">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffb7c5] opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ff2a5f]"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
           </span>
           Instant Dataset Profiling
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 max-w-4xl">
+        <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.1] mb-6 max-w-4xl">
           Understand Your Data <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2a5f] to-[#ffb7c5]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
             In Seconds.
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-500 max-w-2xl mb-10 leading-relaxed">
           Upload your dataset and get an instant quality score, deep profiling insights, and highly actionable AI-driven data cleaning recommendations.
         </p>
 
-        <Link to="/dashboard" className="px-8 py-4 bg-[#ff2a5f] hover:bg-[#ff104a] text-white font-bold rounded-xl shadow-[0_0_20px_rgba(255,42,95,0.4)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,42,95,0.6)] flex items-center gap-2 text-lg tracking-wider">
-          START ANALYSIS 外 <Zap className="w-5 h-5 fill-current" />
+        <Link to="/dashboard" className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-xl shadow-indigo-200 transition-all transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-2 text-lg">
+          START ANALYSIS <Zap className="w-5 h-5 fill-current" />
         </Link>
       </main>
 
@@ -54,7 +54,7 @@ export default function Landing() {
       <section className="bg-white py-24 relative z-10 border-y border-gray-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 animate-float">
-            <h2 className="text-3xl font-bold mb-4 tracking-tight text-[#ffb7c5]">システムの特徴 (Key Features)</h2>
+            <h2 className="text-3xl font-bold mb-4 tracking-tight text-gray-900">Key Features</h2>
             <p className="text-gray-500 max-w-xl mx-auto">Everything you need to deeply understand the state and shape of your raw data before moving into production.</p>
           </div>
 
@@ -145,13 +145,13 @@ export default function Landing() {
 
 function FeatureCard({ icon, title, desc }) {
   return (
-    <div className="p-8 bg-[#121212] rounded-2xl border border-[#27272a] hover:border-[#ff2a5f] hover:shadow-[0_0_20px_rgba(255,42,95,0.3)] transition-all group overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#ff2a5f]/20 to-transparent rounded-bl-full opacity-50 pointer-events-none group-hover:scale-110 transition-transform duration-500"></div>
-      <div className="w-12 h-12 bg-[#050505] rounded-xl border border-[#27272a] flex items-center justify-center mb-6 relative z-10 group-hover:bg-[#1a0b14] transition-colors duration-300">
+    <div className="p-8 bg-white rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl shadow-sm transition-all group overflow-hidden relative">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-50 to-transparent rounded-bl-full opacity-50 pointer-events-none group-hover:scale-110 transition-transform duration-500"></div>
+      <div className="w-12 h-12 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-center mb-6 text-indigo-600 relative z-10 group-hover:bg-white transition-colors duration-300">
         {icon}
       </div>
-      <h3 className="font-bold text-lg text-white mb-3 relative z-10">{title}</h3>
-      <p className="text-gray-400 text-sm leading-relaxed relative z-10">{desc}</p>
+      <h3 className="font-bold text-lg text-gray-900 mb-3 relative z-10">{title}</h3>
+      <p className="text-gray-500 text-sm leading-relaxed relative z-10">{desc}</p>
     </div>
   )
 }

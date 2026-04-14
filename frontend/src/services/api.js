@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/analyze';
+// During development, it falls back to localhost.
+// In production (Vercel), it will use the Render URL provided in the environment variables.
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api/analyze';
 
 export const analyzeData = async (file, target) => {
   const formData = new FormData();
